@@ -1,0 +1,154 @@
+body {
+  font-family: "Open Sans", Arial, Helvetica;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  color: black;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appBar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: rgb(38, 212, 160);
+  color: white;
+  font-weight: bolder;
+
+}
+
+.containerBar {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+}
+
+
+#sectionBar {
+  display: inline-flex;
+  text-align: center;
+}
+
+#sectionBar h4 {
+  margin: 12px 0px 12px 0;
+
+}
+
+#logo {
+  height: 30px;
+  width: 30px;
+  margin: 12px 15px 12px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 12px 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 12px;
+  color: white;
+}
+
+header ul li a:hover {
+  border-bottom: 2px solid white;
+  padding: 5px;
+}
+
+.mainContainer {
+  width: 75%;
+}
+
+.subtitle {
+  font-weight: 600;
+}
+
+
+
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border: 0.5px solid rgb(221, 221, 221);
+  box-shadow: 6px 7px 10px -2px rgba(29,14,14,0.3);
+}
+
+
+.card h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+
+.card p {
+  padding: 5px;
+}
+
+
+
+/*  the link with style button */
+.card a {
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 60px;
+  color: white;
+  font-size: 1.3vw;
+  font-weight: bold;
+  background: rgb(123, 15, 211);
+}
+
+article a .paw {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+}
+
+@media (max-width: 760px) {
+
+  .containerBar {
+    width: 90%;
+  }
+
+  .mainContainer {
+    width: 90%;
+  }
+
+  .cardsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 25px;
+  }
+}
