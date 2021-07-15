@@ -17,11 +17,13 @@ body {
   align-items: center;
 }
 
+/* The css of the toolbar in the top of the page */
+
 .appBar {
   display: flex;
   justify-content: center;
   width: 100%;
-  background: rgb(38, 212, 160);
+  background: rgb(32, 212, 151);
   color: white;
   font-weight: bolder;
 
@@ -32,7 +34,6 @@ body {
   width: 75%;
   justify-content: space-between;
 }
-
 
 #sectionBar {
   display: inline-flex;
@@ -78,7 +79,7 @@ header ul li a:hover {
   border-bottom: 2px solid white;
   padding: 5px;
 }
-
+/* properties of the main content */
 .mainContainer {
   width: 75%;
 }
@@ -87,15 +88,12 @@ header ul li a:hover {
   font-weight: 600;
 }
 
-
-
-
 .cardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 25px;
 }
-
+/* Inside the card */
 .card {
   display: flex;
   flex-direction: column;
@@ -105,7 +103,6 @@ header ul li a:hover {
   box-shadow: 6px 7px 10px -2px rgba(29,14,14,0.3);
 }
 
-
 .card h2 {
   margin: 0;
   padding: 0;
@@ -113,12 +110,9 @@ header ul li a:hover {
   font-size: 1.4em;
 }
 
-
 .card p {
   padding: 5px;
 }
-
-
 
 /*  the link with style button */
 .card a {
@@ -126,16 +120,27 @@ header ul li a:hover {
   text-align: center;
   padding: 8px 60px;
   color: white;
-  font-size: 1.3vw;
+  font-size: 1.125em;
   font-weight: bold;
   background: rgb(123, 15, 211);
 }
 
-article a .paw {
+.card a .paw {
   width: 15px;
   height: 15px;
   margin-right: 8px;
 }
+
+/* Introducing media queries */
+
+@media (max-width:1195px) {
+
+  .cardsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 25px;
+  }
+}
+
 
 @media (max-width: 760px) {
 
@@ -150,5 +155,81 @@ article a .paw {
   .cardsContainer {
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 25px;
+  }
+  
+  .card p {
+    margin: 8px 0 8px 0;
+  }
+
+  .card a {
+    font-size: 1em;
+  }
+
+  .card a .paw {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+@media  (max-width: 420px) {
+  
+  .appBar {
+    font-size: 0.8em;
+  }
+
+  #logo {
+    margin: 10px 12px 10px 0;
+  }
+  #sectionBar h4 {
+    margin: 10px 0 10px 0;
+  }
+
+  nav {
+    margin: 10px 0 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0 10px 0;
+  }
+
+  nav ul li a {
+    padding: 10px;
+  }
+
+  .card p {
+    font-size: 0.8em;
+  }
+
+  .card a {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 360px)
+{
+  .appBar {
+    font-size: 0.7em;
+  }
+
+  #logo {
+    height: 20px;
+    width: 20px;
+  }
+
+  #sectionBar h4 {
+    margin: 10px 0 10px 0;
+  }
+  
+  nav {
+    margin: 10px;
+  }
+
+  nav ul li {
+    margin: 8px 0 8px 0;
+  }
+
+  nav ul li a {
+    padding: 8px;
   }
 }
